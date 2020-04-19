@@ -1,0 +1,236 @@
+body {
+    /* background-image: url(./images/bgPattern5.png); */
+    background-color: whitesmoke;
+    font-family: 'Lato 300', sans-serif;
+    font-weight: 300;
+}
+
+h4 {
+    font-family: 'Boogaloo';
+}
+
+
+/******** MAIN  NAVIGATION ***********/
+
+.navbar-toggler {
+    border: none; 
+}
+
+.navbar-toggler-icon {
+    width: 60px; 
+    height: 60px;
+}
+
+.nav-image {
+    width: 200px;
+}
+
+#links-button {
+    width: 100%;
+}
+
+
+/*********** HBD LINKS  ***********/
+
+a.navText {
+    font-size: .68em;
+    margin: 0px;
+    color: yellow; 
+}
+
+a.nav-item.nav-link.navText:hover {
+    color: rgba(136, 0, 0, 0.589); 
+} 
+
+/***********  HOME PAGE  ***********/
+
+.homepageWrapper,
+.mainImageWrapper {
+    padding-bottom: 30px;
+    max-width: 991px;
+}
+
+.greetingImg {
+    text-align: center;
+}
+
+#greeting {
+    color: red;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gaegu', cursive;
+}
+
+.homeFaces {
+    margin-bottom: 20px;
+}
+
+/***********  ABOUT PAGE  ***********/
+
+.aboutWrapper {
+    background-color: whitesmoke; 
+    padding-top: 60px;
+}
+
+/***********  CURRENT LIST  ***********/
+
+.currentListWrapper {
+    background-color: rgba(72, 0, 114, 0.1);
+    padding-top: 60px;
+}
+
+/***********  FORM  ***********/
+
+.inputFormWrapper {
+    background-color: rgba(24, 121, 0, 0.1);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.innerWrapper {
+    max-width: 500px;
+    margin: 0px auto;
+}
+
+#valid-dates {
+    font-size: .75em;
+}
+
+/***********  FOOTER  ***********/
+
+footer {
+    background-color: rgba(128, 128, 128, 0.1);
+    position: static;
+    padding-bottom: 80px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+
+/***********  LOGIN FORM  ***********/
+
+#loginFormWrapper {
+    border: 1px solid darkslateblue;
+    max-width: 70%;
+    border-radius: 5px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#loginForm {
+    margin: 40px;
+}
+
+#loginForm button {
+    margin-top: 20px;
+}
+
+/***********  EDIT PAGE  ***********/
+
+.hover {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+}
+
+.hover .hoverText {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50px;
+    margin-bottom: 7px;
+}
+
+.hover:hover .hoverText {
+    visibility: visible;
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 99;
+    border: 0px;
+    cursor: pointer;
+    font-size: 40px;
+    background-color: transparent;
+}
+
+.fa-arrow-circle-up {
+    color: rgba(0, 0, 0, 0.137);
+}
+
+/***********  MEDIA QUERIES ***********/
+
+@media (min-width: 576px) {
+    #greeting,
+    .navText {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) {
+    #greeting,
+    .navText {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 991px) {
+    .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        overflow-x: hidden;
+    }
+    .split-left {
+        left: 0;
+        border-right: 1px solid rgb(119, 113, 113);
+    }
+    .split-right {
+        right: 0;
+    }
+    .navText {
+        font-size: .75em;
+    }
+    .homeFaces {
+        display: none;
+    }
+    .fullDogs {
+        display: block;
+        margin-left: 60px;
+    }
+    .mainImageWrapper {
+        background-color: rgba(0, 119, 255, 0.1);
+    }
+    .cardContainer {
+        margin-top: 40px;
+    }
+    #greeting {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 990px) {
+    .fullDogs {
+        display: none;
+    }
+}

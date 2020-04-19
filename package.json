@@ -1,0 +1,37 @@
+{
+  "name": "happybirthday",
+  "version": "1.0.0",
+  "description": "node project for sending birthday cards from A and D.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "arnold",
+    "dusty",
+    "arnold",
+    "and",
+    "dusty",
+    "happy",
+    "birthday"
+  ],
+  "author": "Tim Pinkerton",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cloudinary-core": "^2.5.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "moment": "^2.22.2",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.4",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.18.0",
+    "npm": "^6.1.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sweetalert2": "^7.24.1"
+  }
+}
