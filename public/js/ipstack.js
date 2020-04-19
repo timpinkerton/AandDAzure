@@ -1,16 +1,28 @@
-// const access_key = `${config.ipstack.access_key}`;
+const access_key = 'eb2c545e98932f4b8ee9328f2ccfb0a3';
 
 let visitorData; 
 
 $(document).ready(function () {
 
-    getVisitorInfo(); 
-    
-    submitVisitorInfo(); 
-
+    getVisitorInfo()
+    .then(visitorData => {
+        $.ajax({
+            type: 'POST',
+            url: '/visitors',
+            data: JSON.stringify(visitorData),
+            dataType: 'json',
+            contentType: 'application/json',
+        })
+        .done(function (response) {
+            console.log("visitor data added", response);
+        })
+        // console.log('submitVisitorInfo function ran')
+    })
 });
 
 function getVisitorInfo() {
+
+    console.log('getVisitorInfo function called')
 
     // get the API result via jQuery.ajax
     return $.ajax({
@@ -30,7 +42,7 @@ function getVisitorInfo() {
                 city: (json.city),
                 zip: (json.zip), 
                 latitude: (json.latitude), 
-                longitude: (json.longitude) 
+                longitude: (json.longitude), 
                 // location_geoname_id: (json.location.geoname_id), 
                 // location_capital: (json.location.capital),
                 // location_languages_code: (json.location.languages[0].code),
@@ -40,29 +52,19 @@ function getVisitorInfo() {
                 // location_county_flag_emoji: (json.location.country_flag_emoji),
                 // location_country_flag_emoji_unicode: (json.location_country_flag_emoji_unicode),
                 // location_calling_code: (json.location.calling_code), 
-                // location_is_eu: (json.location.is_eu)            
+                // location_is_eu: (json.location.is_eu)           
             }
-            // output the "zip" object;
+            // output the "zip" object to test that the data was received;
             // alert(visitorData.zip);
         } 
-    });
-    
-}
-
-function submitVisitorInfo() {
-    
-    // POST request to write visitor data
-    $.ajax({
-        type: 'POST',
-        url: '/visitors',
-        data: JSON.stringify(visitorData),
-        dataType: 'json',
-        contentType: 'application/json',
     })
-    .done(function (response) {
-        console.log("visitor data added");
-    })
-    console.log('submitVisitorInfo function ran')
+    .then(res => {
+        console.log("here is the visitor data retrieved: ", res);
+        return res;
+      })
+      .fail(err => {
+        console.log("Error in getting visitor data", err);
+        throw err;
+      })
 
 }
-
