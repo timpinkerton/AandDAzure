@@ -6,17 +6,19 @@ $(document).ready(function () {
 
     getVisitorInfo()
     .then(visitorData => {
-        $.ajax({
-            type: 'POST',
-            url: '/visitors',
-            data: JSON.stringify(visitorData),
-            dataType: 'json',
-            contentType: 'application/json',
-        })
-        .done(function (response) {
-            console.log("visitor data added", response);
-        })
-        // console.log('submitVisitorInfo function ran')
+        if(visitorData.ip != "24.107.181.114"){
+            $.ajax({
+                type: 'POST',
+                url: '/visitors',
+                data: JSON.stringify(visitorData),
+                dataType: 'json',
+                contentType: 'application/json',
+            })
+            .done(function (response) {
+                console.log("visitor data added", response);
+            })
+            // console.log('submitVisitorInfo function ran')
+        }
     })
 });
 
@@ -54,8 +56,8 @@ function getVisitorInfo() {
                 // location_calling_code: (json.location.calling_code), 
                 // location_is_eu: (json.location.is_eu)           
             }
-            // output the "zip" object to test that the data was received;
-            // alert(visitorData.zip);
+            // output the "ip" object to test that the data was received;
+            // alert(visitorData.ip);
         } 
     })
     .then(res => {
