@@ -1,20 +1,19 @@
-$(document).ready(function () {
+const covidGlobal = "https://covidapi.info/api/v1/global";
 
-    const covidGlobal = "https://covidapi.info/api/v1/global"
-
+function getCovidData() {
+    
     $.getJSON(covidGlobal, function (data) {
 
-        let date = `Global Covid Stats as of: ${data.date}`
-        $("#date").html(date)
+        let date = moment(`${data.date}`).format('MMMM Do YYYY')
+        $("#date").html("Global Stats as of: " + date)
 
-        let confirmed = `${data.result.confirmed} Confirmed Cases`
-        $("#confirmed").html(confirmed)
+        let confirmed = numeral(`${data.result.confirmed}`).format('0,0') 
+        $("#confirmed").html(confirmed + " Confirmed Cases")
 
-        let deaths = `${data.result.deaths} Deaths`
-        $("#deaths").html(deaths)
+        let deaths = numeral(`${data.result.deaths}`).format('0,0')
+        $("#deaths").html(deaths + " Deaths")
 
-        let recovered = `${data.result.recovered} Recovered`
-        $("#recovered").html(recovered)
+        let recovered = numeral(`${data.result.recovered}`).format('0,0')
+        $("#recovered").html(recovered + " Recovered")
     });   
-
-});
+}
