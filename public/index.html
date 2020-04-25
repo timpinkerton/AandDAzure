@@ -31,6 +31,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 </head>
 
 <body class="bg-primary">
@@ -63,18 +67,14 @@
     <div class="container">
 
         <div class="row">
-            <div class="mt-5">
+            <div class="mt-1">
                 <img class="img-fluid" src="./images/AandDBBMasks-min.png" alt="Arnold & Dusty">
             </div>
         </div>
 
-        <div id="covidStats" class="row">
+        <div id="covidStats" class="row justify-content-center">
 
-            <div id="earthDiv" class="col-2">
-                <img class="earthImg" src="./images/covid/covidEarthonFire-min.png" alt="the world">
-            </div>
-
-            <div class="stats col-9">
+            <div class="stats">
                 <div class="row justify-content-center">
                     <p id="date"></p>
                 </div>
@@ -102,8 +102,103 @@
 
         </div>
 
+        <div class="text-center">
+            <img src="./images/covid/covidEarthonFire-min.png" class="earthImg" alt="the world">
+        </div>
+
     </div>
 
+    <!-- Footer Section -->
+    <footer class="container-fluid mt-5">
+        <div class="innerWrapper">
+            <!-- <p class="text-center">Share this site with those people on the internet that you call "friends"
+                <i class="far fa-grin"></i>
+            </p> -->
+            <ul class="d-flex justify-content-center footer-links">
+
+                <!-- Twitter share link -->
+                <li>
+                    <a class="nav-item nav-link"
+                        href="https://twitter.com/intent/tweet?text=best%20website%20ever!%20http://www.arnoldanddusty.com/happybirthday.html">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+
+                <!-- Facebook share link -->
+                <li>
+                    <div class="fb-share-button" 
+                        data-href="http://www.arnoldanddusty.com/happybirthday.html" 
+                        data-layout="button_count">
+                    </div>
+                </li>
+
+                <!-- Email share link -->
+                <li>
+                    <a class="nav-item nav-link"
+                        href="mailto:yourfriend@arealemailaddress.com?Subject=my%20favorite%20website!&body=Go%20here:%20http://www.arnoldanddusty.com/happybirthday.html/"
+                        target="_top">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
+
+                <!-- Pinterest share link -->
+                <li>
+                    <a class="nav-item nav-link"
+                        href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.arnoldanddusty.com/happybirthday.html%2F">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </li>
+
+                <!-- Reddit share link -->
+                <li>
+                    <a class="nav-item nav-link"
+                        href="https://reddit.com/submit?url=http://www.arnoldanddusty.com/happybirthday.html/&title=check%20this%20out!">
+                        <i class="fab fa-reddit-alien"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- End footer section -->
+
+    <!-- Twitter for Websites JavaScript. for the tweet button -->
+    <script>
+        window.twttr = (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function (f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <!-- End Twitter JavaScript -->
+
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- End Facebook SDK for JavaScript -->
+
+    <!-- pinit.js -->
+    <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

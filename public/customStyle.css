@@ -33,8 +33,8 @@ INDEX
 }
 
 .earthImg {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
 }
 
 .stats {
@@ -53,6 +53,26 @@ INDEX
     width: 1.1em;
     height: 1.1em;
     margin-left: 12px;
+}
+
+/***********  FOOTER  ***********/
+
+footer {
+    /* background-color: rgba(128, 128, 128, 0.1); */
+    position: static;
+    padding-bottom: 80px;
+}
+
+.footer-links {
+
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+
+.footer-links a {
+    color: yellow;
+    margin: auto 5px;
 }
 
 
