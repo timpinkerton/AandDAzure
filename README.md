@@ -24,8 +24,6 @@ The site is hosted using Azure App service.  Please go [here](http://www.arnolda
 
 * **Tim Pinkerton**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## Acknowledgments
 
 * Arnold & Dusty Bottoms
