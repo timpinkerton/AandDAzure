@@ -6,12 +6,15 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162872972-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-162872972-1');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,7 +36,7 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 </head>
 
@@ -49,7 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link m-auto" href="index.html"><img class="nav-image"
-                        src="./images/nav/homeLink-min.png"></a>
+                            src="./images/nav/homeLink-min.png"></a>
                     <a class="nav-item nav-link m-auto" href="livingRoom.html"><img class="nav-image"
                             src="./images/nav/galleryLink-min.png"></a>
                     <a class="nav-item nav-link m-auto" href="space.html"><img class="nav-image"
@@ -69,6 +72,20 @@
         <div class="row">
             <div class="mt-1">
                 <img class="img-fluid" src="./images/AandDBBMasks-min.png" alt="Arnold & Dusty">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div id="boombox">
+                
+                <img id="boombox-top-img" src="./images/boombox-top-min.png" alt="boombox top">
+
+                <audio id="myAudio" controls autoplay>
+                    <source src="./music/02 No Woman No Cry (Live).mp3" type="audio/mpeg">
+                    sorry, your browser does not support the audio element.
+                </audio>
+
+                <img id="boombox-bottom-img" src="./images/boombox-bottom-min.png" alt="boombox bottom">
             </div>
         </div>
 
@@ -126,9 +143,7 @@
 
                 <!-- Facebook share link -->
                 <li>
-                    <div class="fb-share-button" 
-                        data-href="http://www.arnoldanddusty.com" 
-                        data-layout="button_count">
+                    <div class="fb-share-button" data-href="http://www.arnoldanddusty.com" data-layout="button_count">
                     </div>
                 </li>
 
@@ -201,15 +216,17 @@
     <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
     <script type="text/JavaScript" src="./js/covid.js "></script>
