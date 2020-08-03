@@ -1,9 +1,11 @@
 // to load the mongoose package
 const mongoose = require('mongoose');
 
+//creating the schema.  
 const ReservationSchema = mongoose.Schema({
     name: String,
     birthday: { type: Date },
+    email: String,
   },
   // timestamps option, mongoose automatically adds createdAt and updatedAt fields to the schema.
   {

@@ -154,7 +154,8 @@ function submitNewReservation() {
   //getting the values from the input form and creating an object literal
   const newReservationData = {
     name: $('#name').val(),
-    birthday: $('#birthday').val()
+    birthday: $('#birthday').val(),
+    email: $('#email').val()
   }
 
   // if name and birthday inputs are both blank, user receive a pop up

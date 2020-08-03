@@ -15,6 +15,7 @@ exports.create = (req, res) => {
     const reservation = new Reservation({
         name: req.body.name,
         birthday: req.body.birthday,
+        email: req.body.email
     });
 
     //Saving the reservation to the database
@@ -34,6 +35,7 @@ exports.create = (req, res) => {
     <ul>
         <li>Name: ${req.body.name}</li>
         <li>Birthday: ${req.body.birthday}</li>
+        <li>Birthday: ${req.body.email}</li>
     </ul>
     `;
 
