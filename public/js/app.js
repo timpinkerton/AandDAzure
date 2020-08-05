@@ -147,6 +147,22 @@ function refreshReservationList() {
 }
 
 
+
+// function isEmailValid(emailAddress) {
+
+//   let emailFormat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+
+//   let isValid;
+
+//   if(emailAddress.value.match(emailFormat)) {
+//       isValid = 'yes'
+//     } else {
+//       isValid = 'no'
+//     }
+
+//   return isValid
+//   }
+
 function submitNewReservation() {
 
   console.log('the submitNewReservation function has been called');
@@ -202,7 +218,24 @@ function submitNewReservation() {
 
       backdrop: true,
     })
-  } else {
+  } 
+  
+  // if an email address was entered, this is to check that it is a valid email address
+  // else if (newReservationData.email) {
+  //   let isValid = isEmailValid(newReservationData.email)
+
+  //   if (isValid === 'no') {
+  //     swal.fire({
+  //       title: 'Dang it!',
+  //       text: 'That email address is not valid.',
+  //       type: 'error',
+  
+  //       backdrop: true,
+  //     })
+  //   }
+  // }
+  
+  else {
 
     let isMatch;
 
@@ -289,6 +322,7 @@ function submitNewReservation() {
 function clearForm() {
   document.getElementById("name").value = '';
   document.getElementById("birthday").value = '';
+  document.getElementById("email").value = '';
 }
 
 
